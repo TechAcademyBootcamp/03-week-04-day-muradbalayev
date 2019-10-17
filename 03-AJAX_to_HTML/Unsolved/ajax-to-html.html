@@ -40,6 +40,11 @@
       // Create and save references to 3 td elements containing the Title, Year, and Actors from the AJAX response object
       // Append the td elements to the new table row
       // Append the table row to the tbody element
+      var tableRow = $("tbody");
+      var title = "<td>" + response.Title + "</td>";
+      var year = "<td>" + response.Year + "</td>";
+      var actors = "<td>" + response.Actors + "</td>";
+      tableRow.append(title, year, actors);
     });
 
     // Repeat the above logic to add rows for two more movies of your choice
